@@ -52,14 +52,12 @@ $(document).ready(function() {
     }
   }
 
-  // Добавляем стрелки
 $('.faq-question').each(function() {
   if ($(this).find('.faq-arrow').length === 0) {
     $(this).append('<span class="faq-arrow">▼</span>');
   }
 });
 
-// Обработка кликов
 $('.faq-question').off('click').on('click', function() {
   const $answer = $(this).next('.faq-answer');
   const $arrow = $(this).find('.faq-arrow');
